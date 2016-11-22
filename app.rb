@@ -23,8 +23,18 @@ get '/random-cat' do
   erb(:index)
 end
 
+# post '/named-cat' do
+#   @name = params[:name]
+#   @colour = params[:colour]
+#   p params
+#   erb(:index)
+# end
+
 get '/named-cat' do
-  p params
+
   @name = params[:name]
+  @colour = params[:colour]
+  p params
+
   erb(:index)
 end
