@@ -18,7 +18,13 @@ get '/fish' do
   "swims in the ocean"
 end
 
-get '/cat' do
-  @random_name = ["Amigo", "Oscar", "Viking", "Tama", "Kiciputek"].sample
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking", "Tama", "Kiciputek"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
