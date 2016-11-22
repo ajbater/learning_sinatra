@@ -19,5 +19,6 @@ get '/fish' do
 end
 
 get '/cat' do
+  @random_name = ["Amigo", "Oscar", "Viking", "Tama", "Kiciputek"].sample
   erb(:index)
 end
